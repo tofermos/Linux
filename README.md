@@ -14,6 +14,7 @@
 2. [Ordre HEAD](../md/head.md)
 3. [Ordre SORT, TAIL i HEAD](../md/sort_tail_head.md)
 4. [Ordre GREP](../md/grepResolts.md)
+5. [Exercicis resolts](../md/preguntes1.md)
    
 ## SCRIPTS
 1. [Scripts Linux 1](../md/repasExercicisScripts.md)
