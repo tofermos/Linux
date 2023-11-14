@@ -1,4 +1,4 @@
-#LINUX
+# ÍNDEX LINUX
 
 ## COMPARTICIÓ DE FITXERS
 1. [NFS](../md/NFS.md)
