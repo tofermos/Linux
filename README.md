@@ -6,7 +6,7 @@
 3. [WorkGroup SAMBA](md/WorkGroupSAMBA.md)
 4. [OpenLDAP 1](md/OpenLDAP(I).md)
 5. [OpenLDAP 2](md/OpenLDAP(II).md)
-6. [OpenLDAP LDIF](md/ExempleLDIF-LDAP.md   ) 
+6. [OpenLDAP LDIF](md/ExempleLDIF-LDAP.md) 
 
 ## VARIABLES i SHELLS
 1. [Variables](md/variables.md)
