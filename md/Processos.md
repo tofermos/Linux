@@ -31,56 +31,23 @@ Per defecte ensenya els procesos de l'usuari actiu oberts en el terminal actiu.
 |-s|interactiu|
 
 ```bash
-top - 17:05:05 up 1:58, 1 user, load average: 0,14, 0,19, 0,18
-Tasks: 244 total,
-1 running, 242 sleeping,
-0 stopped,
-1 zombie
-%Cpu(s): 0,3 us, 0,2 sy, 0,0 ni, 99,4 id, 0,0 wa, 0,0 hi, 0,0 si,
-0,0 st
-MiB Mem : 15657,4 total, 12232,4 free,
-1581,4 used,
-1843,6 buff/cache
-MiB Swap:
-2048,0 total,
-2048,0 free,
-0,0 used. 13355,9 avail Mem
-PID USER
-COMMAND
-841 root
-237 root
-irq/118-ELAN071
-2074 tomas
-PRNI
-VIRT
-SHR S%CPU%MEM20
--510 1176860 179092 142668 S
-0
-0
-0
-0 S2,3
-1,71,1
-0,01:20.37 Xorg
-0:14.53
-2001,70,30:20.45
-495136
-RES
-54340
-1/5
-39620 S
-TIME+Procesos.md
-20/3/2021
-mate-terminal
-607 root
-Network
-20
-0
-338920
-20260
-17192 S
-0,3
-0,1
-0:02.40
+tomas@portatil:~$ top -n1
+
+top - 23:04:07 up  8:00,  1 user,  load average: 0,20, 0,26, 0,34
+Tasks: 321 total,   1 running, 320 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0,7 us,  1,5 sy,  0,0 ni, 97,8 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st
+MiB Mem :  15398,6 total,   7634,3 free,   2979,4 used,   4784,8 buff/cache
+MiB Swap:   2048,0 total,   2048,0 free,      0,0 used.  11989,8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+      1 root      20   0  166996  11972   8132 S   0,0   0,1   0:02.39 systemd  
+      2 root      20   0       0      0      0 S   0,0   0,0   0:00.02 kthreadd 
+      3 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 rcu_gp   
+      4 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 rcu_par+ 
+      5 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 slub_fl+ 
+      6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 netns    
+      8 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+ 
+     10 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 mm_perc+
 ```
 ## PRIORITATS
 
@@ -93,181 +60,40 @@ Network
 *  Ens permet llançar un procés amb una prioritat distinta a la per defecte.
 
 Prioritat per defecte.
+```bash
 tomas@Portatil:~$ ./r.sh
-tomas@Portatil:~$ ps -l -a -u ariadna
-F S
-UID
-PID
-PPID C PRI NI ADDR SZ WCHAN TTY
-0 S 1000
-4639
-2080 0 80
-0 - 3013 wait_w pts/0
-4 R 1000
-4643
-4009 0 80
-0 - 3513 -
-pts/1
-TIME CMD
-00:00:00 r.sh
-00:00:00 ps
-Apugem al màxim valor:
-^C
-tomas@Portatil:~$ sudo nice -n-20 ./r.sh
-tomas@Portatil:~$ ps -l -a -u ariadna
-F S
-UID
-PID
-PPID C PRI NI ADDR SZ WCHAN
-4 S
-0
-4651
-2080 0 80
-0 - 4156 -
-4 S
-0
-4652
-4651 0 60 -20 - 3013 -
-4 R 1000
-4653
-4009 0 80
-0 - 3513 -
-Baixem al mínim valor
-^C
-tomas@Portatil:~$ sudo nice -n+19 ./r.sh
-2/5
-TTY
-pts/0
-pts/0
-pts/1
-TIME CMD
-00:00:00 sudo
-00:00:00 r.sh
-00:00:00 psProcesos.md
-20/3/2021
-tomas@Portatil:~$ ps -l -a -u ariadna
-F S
-UID
-PID
-PPID C PRI NI ADDR SZ WCHAN
-4 S
-0
-4655
-2080 0 80
-0 - 4155 -
-4 S
-0
-4656
-4655 0 99 19 - 3013 -
-4 R 1000
-4657
-4009 0 80
-0 - 3513 -
-TTY
-pts/0
-pts/0
-pts/1TIME CMD
-00:00:00 sudo
-00:00:00 r.sh
-00:00:00 ps
-TTY
-pts/2
-pts/2
-pts/2
-pts/0TIME CMD
-00:00:00 su
-00:00:00 sh
-00:00:00 r.sh
-00:00:00 ps
-TTY
-pts/2
-pts/2
-pts/0TIME CMD
-00:00:00 su
-00:00:00 sh
-00:00:00 ps
-##renice
-Ens permet canviar la prioritat de procesos en marxa.
-tomas@Portatil:~$ ps -l -a -u ariadna
-F S
-UID
-PID
-PPID C PRI NI ADDR SZ WCHAN
-4 S
-0
-5658
-4958 0 80
-0 - 4068 -
-4 S 1001
-5659
-5658 0 80
-0 -
-654 -
-0 S 1001
-5662
-5659 0 80
-0 - 3013 -
-4 R 1000
-5674
-2080 0 80
-0 - 3513 -
-tomas@Portatil:~$ sudo renice +5 -u ariadna
-[sudo] contrasenya per a tomas:
-1001 (user ID) old priority 0, new priority 5
-tomas@Portatil:~$ ps -l -a -u ariadna
-F S
-UID
-PID
-PPID C PRI NI ADDR SZ WCHAN
-4 S
-0
-5658
-4958 0 80
-0 - 4068 -
-4 S 1001
-5659
-5658 0 85
-5 -
-654 -
-4 R 1000
-5720
-2080 0 80
-0 - 3513 -
-kill
+```
+```bash
+tomas@portatil:~$ ps -l -C r.sh
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000   24383   24232  0  80   0 -  4498 do_wai pts/0    00:00:00 r.sh
+tomas@portatil:~$ 
+```
+Apugem el valor de la prioritat al màxim
+```bash
+sudo nice -n-20 ./r.sh
+```
+
+```bash
+tomas@portatil:~$ ps -l -C r.sh
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+4 S     0   25894   25893  0  60 -20 -  4498 -      pts/3    00:00:00 r.sh
+```
+
+Abaixem el valor al mínim
+
+```bash
+sudo nice -n+19 ./r.sh
+
+```bash
+tomas@portatil:~$ ps -l -C r.sh
+F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+4 S     0   26129   26128  0  99  19 -  4498 -      pts/3    00:00:00 r.sh
+tomas@portatil:~$ 
+```
+
 Ens permnet cancel·lar un procés per PID
-kill SENYAL PID
-Podem veure les senyals possibles:
-tomas@Portatil:~$ kill -l
-1) SIGHUP
-2) SIGINT
-3) SIGQUIT 4) SIGILL
-5) SIGTRAP
-6) SIGABRT 7) SIGBUS
-8) SIGFPE
-9) SIGKILL 10) SIGUSR1
-11) SIGSEGV 12) SIGUSR2 13) SIGPIPE 14) SIGALRM 15) SIGTERM
-16) SIGSTKFLT
-17) SIGCHLD 18) SIGCONT 19) SIGSTOP 20) SIGTSTP
-21) SIGTTIN 22) SIGTTOU 23) SIGURG 24) SIGXCPU 25) SIGXFSZ
-26) SIGVTALRM
-27) SIGPROF 28) SIGWINCH
-29) SIGIO
-30) SIGPWR
-31) SIGSYS 34) SIGRTMIN
-35) SIGRTMIN+1 36) SIGRTMIN+2 37) SIGRTMIN+3
-3/5Procesos.md
-20/3/2021
-38) SIGRTMIN+4 39) SIGRTMIN+5 40) SIGRTMIN+6 41) SIGRTMIN+7 42)
-SIGRTMIN+8
-43) SIGRTMIN+9 44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12 47)
-SIGRTMIN+13
-48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14 51) SIGRTMAX-13 52)
-SIGRTMAX-12
-53) SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9 56) SIGRTMAX-8 57)
-SIGRTMAX-7
-58) SIGRTMAX-6 59) SIGRTMAX-5 60) SIGRTMAX-4 61) SIGRTMAX-3 62)
-SIGRTMAX-2
-63) SIGRTMAX-1 64) SIGRTMAX
+``
 tomas@Portatil:~$
 Normalment usem -9 o -15
 $ ./r.sh
