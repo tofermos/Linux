@@ -11,7 +11,7 @@ sense haver d'esciure la ruta completa cada vegada hem d'**incloure esta ruta al
 
 >**Note**
 >
->Si vos demanen que un "executable", siga un fitxer binari (ordre o aplicació), siga script (text pla) puga executar-se **des de qualsevol >directori**,  vol dir que el fitxer (o un enllaç) estarà en un directori registrat en la **variable de sistema PATH**.
+>Si vos demanen que un "executable", siga un fitxer binari (ordre o aplicació), siga script (text pla) puga executar-se **des de qualsevol directori**,  vol dir que el fitxer (o un enllaç) estarà en un directori registrat en la **variable de sistema PATH**.
 >El sistema busca les ordres que enviem ("executables") en el directori que indiquem, si no està busca en cadascun dels directori anotats a la variable de sistema PATH fins que el troba.
 >No pot buscar en tot l'arbre de directoris, seria inviable.
 
