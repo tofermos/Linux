@@ -5,9 +5,7 @@ Els nuclis o distros de Linux es divideixen en dos grans grups. Els que usen paq
 ## 1.  De forma gràfica:
 
 *   gdebi-gtk
-
 *   Synaptic
-
 *   Dselect
     
 ## 2.  Des de consola. Descarregant el paquet
@@ -24,16 +22,16 @@ aptitude remove paquet
 ```
 ```bash
 sudo snap install paquet
-sudo snap rermove paquet
+sudo snap remove paquet
 ```
 
 ## Paquets *.deb* 
 Paquets d'instal·lació de Debian/GNU i derivades ( Ubuntu ).
-Contenen tres fixers:
+Contenen tres fitxers:
 
-*   debian-binary -  número de versió del formatodeb. 
-*   control.tar.gz - la metadada.
-*   data.tar, data.tar.gz, data.tar.bz2 o data.tar.lzma: - els arxius a instal·lar.
+*   *debian-binary* -  número de versió del formatodeb. 
+*   *control.tar.gz* - la metadada.
+*   *data.tar, data.tar.gz, data.tar.bz2 o data.tar.lzma* - els arxius a instal·lar.
 
 
 Per instal·lar
@@ -52,7 +50,7 @@ Per desinstal·lar:
 Esta última elimina totes les dades 
 
 ## Repositori
-Servidor accessible des d'internet que emmmagatzema els paquets ( programes ) a instal·lar. 
+Servidor accessible des d'internet que magatzema els paquets ( programes ) a instal·lar. 
 
 ## Tarballs
 
@@ -66,7 +64,7 @@ Pot ser un paquet *nom_paquet.tar.gz* o *nom_paquet.tgz*.
 ```bash
 cd directori_on_esta_tarball
 tar –zxvf nom_paquet.tar.gz 
-cd nom_paquete_desempaquetat
+cd nom_paquet_desempaquetat
 sudo ./configure
 make
 make install
@@ -84,7 +82,7 @@ make install
 ```
 
 ## Scripts.
-Els scripts poden estar fets amb els comandaments propis del Shell ( com farem a classe ) o amb el llenguatge multiparadigma interpretat Python.
+Els scripts poden estar fets amb els comandaments propis del Shell (com farem a classe) o amb un llenguatge com Python.
 
 El que caldrà fer és donar permisos d'execució ( en Linux els "executables" han de dur este "atribut" ) i llançar-los:
 
