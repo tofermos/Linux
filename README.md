@@ -18,6 +18,10 @@
 3. [Ordre SORT, TAIL i HEAD](md/sort_tail_head.md)
 4. [Ordre GREP](md/grepResolts.md)
 5. [Exercicis resolts](md/preguntes1.md)
+
+## ADMINISTRACIó
+1. [Backup incremental](md/CopiaSeguretatIncremental.md)
+2. [Instal·lació de paquets](md/instalPaquets.md)
    
 ## SCRIPTS
 1. [Scripts Linux 1](md/repasExercicisScripts.md)
