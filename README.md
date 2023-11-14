@@ -1,7 +1,7 @@
 # ÍNDEX LINUX
 
 ## COMPARTICIÓ DE FITXERS
-1. [NFS](../md/NFS.md)
+1. [NFS](md/NFS.md)
 2. [SAMBA](../md/SAMBA.md)
 3. [WorkGroup SAMBA](../md/WorkGroupSAMBA.md)
 4. [OpenLDAP 1](../md/OpenLDAP(I).md)
