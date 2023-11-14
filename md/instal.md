@@ -10,7 +10,7 @@ Els nuclis o distros de Linux es divideixen en dos grans grups. Els que usen paq
 
 *   Dselect
     
-## 2.  Des de consola. Descarregant el paquet**
+## 2.  Des de consola. Descarregant el paquet
 ```
 sudo dpkg –i paquet.deb
 ```
