@@ -19,9 +19,10 @@
 4. [Ordre GREP](md/grepResolts.md)
 5. [Exercicis resolts](md/preguntes1.md)
 
-## ADMINISTRACIó
+## ADMINISTRACIÓ
 1. [Backup incremental](md/CopiaSeguretatIncremental.md)
 2. [Instal·lació de paquets](md/instalPaquets.md)
+3. [Exemple d'instal·lació](md/instalRStudio.md)
    
 ## SCRIPTS
 1. [Scripts Linux 1](md/repasExercicisScripts.md)
