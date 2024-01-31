@@ -23,6 +23,7 @@
 1. [Backup incremental](md/CopiaSeguretatIncremental.md)
 2. [Instal·lació de paquets](md/instalPaquets.md)
 3. [Exemple d'instal·lació](md/instalRStudio.md)
+4. [Hardware](md/hardwareLinux.md)
    
 ## SCRIPTS
 1. [Scripts Linux 1](md/repasExercicisScripts.md)
