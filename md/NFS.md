@@ -68,7 +68,7 @@ sudo exportfs -a
 ```
 L'opció "-s" ens dona informació dels directoris a exportar.
 
-![Imatge ](NFS/3exportfs.png)
+![Imatge ](PNG/3exportfs.png)
 
 Comprovem el resultat.
 
