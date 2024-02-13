@@ -6,7 +6,7 @@ Instal·lar 2 Ubuntu configurant com a Xarxa Interna.
 * Ubuntu client. IP: 192.168.0.101/24
 
 :mag:Els termes "servidor" i "client" no els hem de relacionar amb els d'un Domini ( xarxa amb un OpenLdap...).
-Parlem de la fució de servidor d'arxius o impressió per a altres màquines connectades (clients).
+Parlem de la funció de servidor d'arxius o impressió per a altres màquines connectades (clients).
 
 ## 2. En la part del "Servidor"
 
@@ -52,7 +52,7 @@ sudo nano /etc/exports
 /prova1 *(rw,sync) 
 /prova2 192.168.0.101(ro,sync)
 ```
-Quan la carpeta compartida està en un subdirectori, caldria indicar si que faá una comporvació extra amb un tercer paràmtres:
+Quan la carpeta compartida està en un subdirectori, caldria indicar si farà una comprovació extra amb un tercer paràmtre:
 subtree_check
 no_subtree_check ( valor per defecte si no indiquem res )
 
@@ -123,7 +123,7 @@ tomas@MVUbuntuClient:/$ touch /PROVA1/f1.txt
 ```
 Ara, en accedir a */PROVA1* i */PROVA2* del client estarem accedint a */prova1* i */prova2* del "servidor" amb els permisos que donats al servidor en crear-se ( chmod 777 ...)
 
-⌨️ Comprova que tens permisos de *rwx* en PROVA1 però només de *rx* en PROVA2...
+⌨️ Comprova que tens permisos de *rwx* en PROVA1 però només de *rw* en PROVA2...
 
 1.  Observa els permisos de les PROVA1 i PROVA2 ...*ls -l*
 2.  Crea i elimina fitxers (touch) i carpetes (mkdir) en el servidor
@@ -132,7 +132,7 @@ Ara, en accedir a */PROVA1* i */PROVA2* del client estarem accedint a */prova1* 
 5.  Intenta amb *sudo chmod* des del client canviar el permisos de PROVA1 o PROVA2... 
 
 ### 3.3 Fer el muntatge permanent.
-Si reiniciem el "client" podem comprovar que:
+Si xreiniciem el "client" podem comprovar que:
 
 * No veiem els fitxers creats en el servidor dins de les carpetes.
 * Si podem navegar, llagir, crear o eliminar... fins i tot en  PROVA2.
@@ -164,7 +164,7 @@ Hem de modificar el fiter fstab per a que el muntatge siga permanent.
 * **/etc/hosts.deny**
 
 1. Modificant estos fitxers permetem/deneguem (allow/deny) l'accés **per IPs**
-2. NO podem triar carpetes. Afecta a **tots els recursos** compartits.
+2. xNO podem triar carpetes. Afecta a **tots els recursos** compartits.
 3. Sí que podem limitar el **tipus de permís r,w,x** lectura (r),execució(r,x), escriptura (r,w)...
 
 **Veiem un exemple:**
@@ -173,8 +173,8 @@ Compartim carpetes amb permisos donats...
 
 ![Fitxer /etc/exports ](../png/NFS/exports2.png)
 
-Deneguem a la IP 192.168.0.101 qualsevol accès per a escriptura (x)
-Podríem afegir accés de lectura (r) o d'execució (w) seguit de comes: w,r  w,r,x...
+Deneguem a la IP 192.168.0.101 qualsevol accès per a escriptura (w)
+Podríem afegir accés de lectura (r) o d'execució (x) seguit de comes: w,r  w,r,x...
 
 ![Imatge /etc/hosts.deny ](../png/NFS/deny.png)
 
@@ -218,7 +218,7 @@ Al registre del sistema afegim 2 NOUS VALORS **DWORD** amb els noms **AnonymousU
 Ja podem executar l'ordre del NFS Client per "muntar" la Unitat.
 Veiem que només podem accedir de forma anònima.
 
-![mount ok](NFS/mountOK.png)
+![mount ok](../png/NFS/mountOK.png)
 
-![mount no ok](NFS/mountError.png)
+![mount no ok](../png/NFS/mountError.png)
 
