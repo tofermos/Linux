@@ -66,7 +66,7 @@ sambashare:x:132:tomas
 sudo nmap localhost
 ```
 
-![nmap localhost](SAMBA/nmapSamba1.png)
+![nmap localhost](../png/SAMBA/nmapSamba1.png)
 
 Ports per defecte de Samba
 139 i 445
