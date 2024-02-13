@@ -127,7 +127,7 @@ Si en estos moments tenim un Windwos 10/11 instal·lat en un PC tal que:
 
 Obtindrem el següent:
 
-![Windows veu carpeta Smb de Linux](SAMBA/WindowsSamba1.png)
+![Windows veu carpeta Smb de Linux](../png/SAMBA/WindowsSamba1.png)
 
 Per entrar hem de connectar a unitat de xarxa.
 
@@ -135,16 +135,16 @@ Per entrar hem de connectar a unitat de xarxa.
 
 Fer botó contrari i connectar a unitat de xarxa
 
-![Windows veu carpeta Smb de Linux](SAMBA/WindowsSamba2.png)
+![Windows veu carpeta Smb de Linux](../png/SAMBA/WindowsSamba2.png)
 
-![Windows veu carpeta Smb de Linux](SAMBA/WindowsSamba3.png)
+![Windows veu carpeta Smb de Linux](../png/SAMBA/WindowsSamba3.png)
 
 Si no proporcionem unes credencials amb permís (usuari "tomas" del Ubuntu, al nostre cas), entrarem com a "guest" si està permés ( *guest ok = yes* )
 
 ## Amb el NET USE
 Obrim el cmd de Windows
 
-![net use](SAMBA/netuse.png)
+![net use](../png/SAMBA/netuse.png)
 
 ```bat
 net use x: \\192.168.0.100\directori1 /user:tomas /persistent:yes
@@ -155,9 +155,9 @@ net use x: \\192.168.0.100\directori1 /user:tomas /persistent:yes
 net use x: /delete
 ```
 
-![](SAMBA/netuseDelete.png)
+![](../png/SAMBA/netuseDelete.png)
 
-![](SAMBA/netusePersistentUser.png)
+![](../png/SAMBA/netusePersistentUser.png)
 
 :computer: Busca l'ajuda del comandament NET USE així:
 ```bat
@@ -205,10 +205,10 @@ smbclient //192.168.0.100/directori1 -U tomas%contrassenya
 
 Una vegada en la sessió de client de Samba podem copiar cap al servidor (*put*) o des dels servidor (*get*)
 ##### ***get*** Servidor->Client
-![get](SAMBA/smbclientGet.png)
+![get](../png/SAMBA/smbclientGet.png)
 
 ##### ***put*** Client->Servidor
-![put](SAMBA/smbClientPut.png)
+![put](../png/SAMBA/smbClientPut.png)
  
 ### 3.4 Muntar unitat.
 De forma similar al NFS podrem tindre les carpetes compartides del Servidor muntades al client, però amb Samba tindreḿ autoenticació d'usuari.
@@ -241,7 +241,7 @@ drwxrwxrwx 2 rosa rosa 4096 de març  18 23:28 /directori1/
 #### Muntem la carpeta
 Fixem-nos amb el problema que apareix quan muntem la carpeta per a un usuari (rosa) o per a convidats (guest). 
 
-![Error en mount](SAMBA/ErrorMount.png)
+![Error en mount](../png/SAMBA/ErrorMount.png)
 
 Com veiem, en el muntatge **canvia de propietari la carpeta compartida...**
 
@@ -256,23 +256,23 @@ rosa@MVUbuntuClient:~$ touch /directori1/noerror.txt
 rosa@MVUbuntuClient:~$ ls -l /directori1
 -rwxr-xr-x 1 rosa root 0 de març  19 01:44 noerror.txt
 ```
-![Error Mount](SAMBA/NoErrorMount.png)
-![No error mount](SAMBA/NoErrorMount2.png)
+![Error Mount](../SAMBA/NoErrorMount.png)
+![No error mount](../png/SAMBA/NoErrorMount2.png)
 
 Quan ens hem connectat com "guest" creem com a "nobody:nogroup"
 Quan ens hem connectat com a "rosa" creem com a "rosa:rosa"
 
 *Des del client...*
 
-![Vista client](SAMBA/VistaFinalClient.png)
+![Vista client](../SAMBA/VistaFinalClient.png)
 
 *Des del servidor...*
 
-![Vista servidor](SAMBA/VistaFinalServidor.png)
+![Vista servidor](../SAMBA/VistaFinalServidor.png)
 
 Veiem un darrer exemple on usem el **uid** i el **gid**
 
-![Dos casos](SAMBA/TomasRosa.png)
+![Dos casos](../SAMBA/TomasRosa.png)
 
 
 Del *ls -l* observem que:
@@ -285,5 +285,4 @@ Del *ls -l* observem que:
 >Mira'l.
 
 
-[serveisUbuntu]:https://github.com/tofermos/ISO/blob/main/serveis.md
-[WGSamba]:https://github.com/tofermos/ISO/blob/main/WorkGroupSAMBA.md
+[WGSamba]:https://github.com/tofermos/Linux/blob/main/md/WorkGroupSAMBA.md
