@@ -60,7 +60,7 @@ no_subtree_check ( valor per defecte si no indiquem res )
 /home/tomas/Documents/MarkDown 192.168.0.101(rw,sync,**no_subtree-check**)
 
 
-![Imatge edició /etc/exports](NFS/1exports.png)
+![Imatge edició /etc/exports](png/NFS/1exports.png)
 
 **Apliquem el canvi que hem fet al servidor**
 ```bash
