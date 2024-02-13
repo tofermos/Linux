@@ -68,7 +68,7 @@ sudo exportfs -a
 ```
 L'opció "-s" ens dona informació dels directoris a exportar.
 
-![Imatge ](PNG/3exportfs.png)
+![Imatge ](../png/NFS/3exportfs.png)
 
 Comprovem el resultat.
 
@@ -155,7 +155,7 @@ Ho comprovem:
 
 Hem de modificar el fiter fstab per a que el muntatge siga permanent. 
 
-![fstab modificat](NFS/fstab.png)
+![fstab modificat](../png/NFS/fstab.png)
 
 
 ### 4 Podem denegar/permetre l'accés segons IP
@@ -171,16 +171,16 @@ Hem de modificar el fiter fstab per a que el muntatge siga permanent.
 
 Compartim carpetes amb permisos donats...
 
-![Fitxer /etc/exports ](NFS/exports2.png)
+![Fitxer /etc/exports ](../png/NFS/exports2.png)
 
 Deneguem a la IP 192.168.0.101 qualsevol accès per a escriptura (x)
 Podríem afegir accés de lectura (r) o d'execució (w) seguit de comes: w,r  w,r,x...
 
-![Imatge /etc/hosts.deny ](NFS/deny.png)
+![Imatge /etc/hosts.deny ](../png/NFS/deny.png)
 
 Comprovem l'efecte en el client amb la IP 
 
-![Imatge efecte deny en el client](NFS/denyClient.png)
+![Imatge efecte deny en el client](../png/NFS/denyClient.png)
 
 ⌨️ Després de fer la prova, canvia la IP a la mateixa màquina "client" i prova-ho de nou...
 
@@ -190,26 +190,26 @@ Comprovem l'efecte en el client amb la IP
 
 En la configuració per defecte ve habilitada la regla que hi afecta però he de revisar-la.
 
-![fireWall](NFS/Firewall.png)
+![fireWall](../png/NFS/Firewall.png)
 
 ## Activar el servei.
 Win + R
 Regedit
 Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default
 
-![uid](NFS/NFSWindowsClient.png)
+![uid](../png/NFS/NFSWindowsClient.png)
 
 ## Uid i Gid al Registre per a l'accès.
 Busquem valors vàlids de *uid* i *gid*
 
-![uidgidLinux](NFS/UidGid.png)
+![uidgidLinux](../png/NFS/UidGid.png)
 
 Al registre del sistema afegim 2 NOUS VALORS **DWORD** amb els noms **AnonymousUid** i **AnonymousGid** on posem un UID i un GID que coincidisca amb un que tinga permís en Linux.
 
-![uid](NFS/NFSWindowsGid.png)
+![uid](../png/NFS/NFSWindowsGid.png)
 
 
-![uid](NFS/NFSWindowsUid.png)
+![uid](../png/NFS/NFSWindowsUid.png)
 
 :mag: Compte! Marca la casella correcta per introduir el valor
 [x]Decimal
