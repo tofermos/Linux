@@ -245,7 +245,55 @@ Fixem-nos amb el problema que apareix quan muntem la carpeta per a un usuari (ro
 
 Com veiem, en el muntatge **canvia de propietari la carpeta compartida...**
 
-Se soluciona indicant qui serà el nou propietari amb el paràmetre **uid**
+Se soluciona indicant qui serà el nou>**Warning**
+>
+>Recorda fer una còpia de seguretat abans de modificar qualsevol fitxer de configuració:
+>```bash
+>sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.cop
+>```
+Editem el fitxer de configuració del servei.
+```bash
+sudo nano /etc/samba/smb.conf
+```
+:memo: Afegim una **secció** per cada recurs compartit com la següent:
+```makefile
+[directori1]
+   comment = Directori compartit amb permís d'escriptura
+   path = /directori1
+   browseable = yes
+   read only = no
+   guest ok = yes
+   create mask = 0755
+```
+Reiniciem el servei
+```bash
+sudo systemctl restart smbd
+```
+
+Secció de */etc/samba/smb.conf*
+* *create mask* defineix quins permisos tindran els nous fitxer i carpetes creats dins de la carpeta compartida
+* *guest ok* permet l'accès a un usuari no existent en Linux (servidor)
+* *read only* sols lectura 
+* *browseable* Carpeta navegable
+   
+:mag: Els permisos del servidor Linux sobrescriuen els que indiquem al *smb.conf*. 
+
+Els revisem.
+```bash
+ls -l /directori1
+```
+```bash
+sudo chmod 777 /directori1
+```
+
+
+## 3 CLIENT
+### 3.1 Client Windows
+
+uid=rosa
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+Attach files by dragging & dropping, selecting or pasting them.
+ propietari amb el paràmetre **uid**
 
 :computer: Com exemple
 ```makefile
@@ -256,7 +304,7 @@ rosa@MVUbuntuClient:~$ touch /directori1/noerror.txt
 rosa@MVUbuntuClient:~$ ls -l /directori1
 -rwxr-xr-x 1 rosa root 0 de març  19 01:44 noerror.txt
 ```
-![Error Mount](../SAMBA/NoErrorMount.png)
+![Error Mount](../png/SAMBA/NoErrorMount.png)
 ![No error mount](../png/SAMBA/NoErrorMount2.png)
 
 Quan ens hem connectat com "guest" creem com a "nobody:nogroup"
