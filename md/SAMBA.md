@@ -102,7 +102,7 @@ sudo systemctl restart smbd
 
 Secció de */etc/samba/smb.conf*
 * *create mask* defineix quins permisos tindran els nous fitxer i carpetes creats dins de la carpeta compartida
-* *guest ok* permet l'accès a un usauri no existent en Linux (servidor)
+* *guest ok* permet l'accès a un usuari no existent en Linux (servidor)
 * *read only* sols lectura 
 * *browseable* Carpeta navegable
    
