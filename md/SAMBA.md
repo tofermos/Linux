@@ -264,15 +264,15 @@ Quan ens hem connectat com a "rosa" creem com a "rosa:rosa"
 
 *Des del client...*
 
-![](../SAMBA/VistaFinalClient.png)
+![](../png/SAMBA/VistaFinalClient.png)
 
 *Des del servidor...*
 
-![](../SAMBA/VistaFinalServidor.png)
+![](../png/SAMBA/VistaFinalServidor.png)
 
 Veiem un darrer exemple on usem el **uid** i el **gid**
 
-![](../SAMBA/TomasRosa.png)
+![](../png/SAMBA/TomasRosa.png)
 
 
 Del *ls -l* observem que:
