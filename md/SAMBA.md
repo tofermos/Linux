@@ -145,7 +145,7 @@ Si no proporcionem unes credencials amb permís (usuari "tomas" del Ubuntu, al n
 Obrim el cmd de Windows
 
 ![net use](../png/SAMBA/netuse.png)
-
+uid=rosa
 ```bat
 net use x: \\192.168.0.100\directori1 /user:tomas /persistent:yes
 ```
@@ -205,10 +205,10 @@ smbclient //192.168.0.100/directori1 -U tomas%contrassenya
 
 Una vegada en la sessió de client de Samba podem copiar cap al servidor (*put*) o des dels servidor (*get*)
 ##### ***get*** Servidor->Client
-![get](../png/SAMBA/smbclientGet.png)
+![](../png/SAMBA/smbclientGet.png)
 
 ##### ***put*** Client->Servidor
-![put](../png/SAMBA/smbClientPut.png)
+![](../png/SAMBA/smbClientPut.png)
  
 ### 3.4 Muntar unitat.
 De forma similar al NFS podrem tindre les carpetes compartides del Servidor muntades al client, però amb Samba tindreḿ autoenticació d'usuari.
@@ -264,15 +264,15 @@ Quan ens hem connectat com a "rosa" creem com a "rosa:rosa"
 
 *Des del client...*
 
-![Vista client](../SAMBA/VistaFinalClient.png)
+![](../SAMBA/VistaFinalClient.png)
 
 *Des del servidor...*
 
-![Vista servidor](../SAMBA/VistaFinalServidor.png)
+![](../SAMBA/VistaFinalServidor.png)
 
 Veiem un darrer exemple on usem el **uid** i el **gid**
 
-![Dos casos](../SAMBA/TomasRosa.png)
+![](../SAMBA/TomasRosa.png)
 
 
 Del *ls -l* observem que:
