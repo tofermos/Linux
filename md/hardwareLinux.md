@@ -67,16 +67,6 @@ mostra informació de la BIOS del sistema. Inclou la versió de BIOS, la data i 
 mostra informació sobre la CPU del sistema. Inclou el tipus de CPU, la velocitat de rellotge, caché, etc.
 ## free -m
 mostra la quantitat de memòria RAM disponible al sistema.
-
-## lscpu
-mostra informació sobre la CPU
-```
-tomas@portatil:~$ lscpu|grep L1[di]
-L1d cache:                          256 KiB (8 instances)
-L1i cache:                          256 KiB (8 instances)
-```
-
-
 ## df -h
 mostra l'espai de magatzematge disponible als discos duros iy particions
 
