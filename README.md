@@ -34,8 +34,8 @@
 ## SCRIPTS
 1. [Scripts Linux 1](md/repasExercicisScripts.md)
 2. [Scripts Linux 2](md/repasExercicisScriptsII.md)
-3. [Errors habituals en sctripts I](md/REPÀS D'ALGUNS CONCEPTES I ERRORS DELS SCRIPT I.md)
-4. [Errors habituals en sctripts II](md/REPÀS D'ALGUNS CONCEPTES I ERRORS DELS SCRIPT II.md)
-5. [Errors habituals en sctripts III](md/REPÀS D'ALGUNS CONCEPTES I ERRORS DELS SCRIPT III.md)
+3. [Errors habituals en sctripts I](md/errorsHabitualsScripts1.md)
+4. [Errors habituals en sctripts II](md/errorsHabitualsScripts2.md)
+5. [Errors habituals en sctripts III](md/errorsHabitualsScripts3.md)
 
  
