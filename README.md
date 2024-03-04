@@ -1,5 +1,6 @@
 # ÍNDEX LINUX
 1. [Comptes locals](md/cmdUsuarisGrups.md)
+2. [Ordres i scripts de comptes](md/ordresusuarisigrups.md)
 
 ## COMPARTICIÓ DE FITXERS
 1. [NFS](md/NFS.md)
