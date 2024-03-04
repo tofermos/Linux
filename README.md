@@ -26,9 +26,14 @@
 2. [Instal·lació de paquets](md/instalPaquets.md)
 3. [Exemple d'instal·lació](md/instalRStudio.md)
 4. [Hardware](md/hardwareLinux.md)
+
+## TASQUES PROGRAMADES
+1. [Programar tasques](md/ProgramarTasques.md)
+2. [BackupProgramat](md/BackupProgramat.md)
    
 ## SCRIPTS
 1. [Scripts Linux 1](md/repasExercicisScripts.md)
 2. [Scripts Linux 2](md/repasExercicisScriptsII.md)
+3. 
 
  
