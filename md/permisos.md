@@ -43,7 +43,7 @@ rosa
 
 Quan es crea una carpeta de PERFIL d'USUARI:
 * S'assigna com a propietari l'usuari ( tot i que s'executa com a *sudo* ). (**u** rosa )
-* S'ass1gna com a grup propietari, el principal de l'usuari. ( **g** rosa)
+* S'assigna com a grup propietari, el principal de l'usuari. ( **g** rosa)
 * Se li dóna permisos d'escriptura  en carpeta només al propietari (**rwx** rosa ). (Llegir Nota 1)
 
 ### COMPROVACIÓ
@@ -81,7 +81,7 @@ tomas@portatil:~$ groups tomas
 tomas : tomas adm cdrom sudo dip plugdev lpadmin lxd sambashare rosa
 ```
 Els canvis per a aplicar-se cal que reinciem la sessió de *tomas*
->**:NOTE***
+> **NOTE***
 > usermod **-aG**
 >Si no indicamos -a, elimina el usuario de los grupos que pertenece. Ver ayuda (man) seobre *-aG, -G, -g*
 ```linux
