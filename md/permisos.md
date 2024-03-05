@@ -1,5 +1,5 @@
-# PERMISOS 
-## ÚS EN LA CARPETA PERSONAL (PERFIL)
+# PERMISOS EN EL PERFIL D'USUARI
+## CREACIÓ DE LA CARPETA DE PERFIL
 
 Creem un usuari tal com hem vist i observem qui té permisos i quins permisos en la carpeta */home/directori/*
 ```linux
@@ -14,6 +14,8 @@ Nova contrasenya:
 Torneu a escriure la nova contrasenya: 
 passwd: s'ha actualitzat la contrasenya satisfactòriament
 ```
+## ÚS DE LA CARPETA
+
 Iniciem sessió amb l'usuari nou ( ordre *su usuari* )
 ```linux
 tomas@portatil:~$ su rosa
@@ -35,10 +37,16 @@ drwxr-xr-x 74 tomas tomas 12288 de març   5 10:04 .
 rosa@portatil:/home/tomas$ whoami
 rosa
 ```
-Quan es crear una carpeta de PERFIL d'USUARI:
+## CONCLUSIÓ. 
+
+### HIPÒTESI
+
+Quan es crea una carpeta de PERFIL d'USUARI:
 * S'assigna com a propietari l'usuari ( tot i que s'executa com a *sudo* ). (**u** rosa )
 * S'ass1gna com a grup propietari, el principal de l'usuari. ( **g** rosa)
 * Se li dóna permisos d'escriptura  en carpeta només al propietari (**rwx** rosa ). (Llegir Nota 1)
+
+### COMPROVACIÓ
 
 Tanquem la sessió de *rosa* amb *exit* i tornarem a la sessió anterior de *tomas*
 ```linux
@@ -61,6 +69,7 @@ drwxr-x--- 2 rosa rosa 4096 de març   5 10:13 /home/rosa
 
 Només el grup de *rosa* pot executar la carpeta. Els "altres" (**others** ), no.
 
+### PROVA FINAL
 Què passaria si incloerem l'usuari *tomas* en el grup *rosa?
 
 ```linux
