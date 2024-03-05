@@ -81,7 +81,9 @@ tomas@portatil:~$ groups tomas
 tomas : tomas adm cdrom sudo dip plugdev lpadmin lxd sambashare rosa
 ```
 Els canvis per a aplicar-se cal que reinciem la sessió de *tomas*
-IMPORTANT: el usermod **-aG**
+>**:NOTE***
+> usermod **-aG**
+>Si no indicamos -a, elimina el usuario de los grupos que pertenece. Ver ayuda (man) seobre *-aG, -G, -g*
 ```linux
 tomas@portatil:~$ ls -l /home/rosa
 total 0
