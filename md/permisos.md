@@ -58,7 +58,32 @@ Veiem que no ens deixa. Recordem els permisos de la carpeta de perfil amb *ls -l
 tomas@portatil:~$ ls -ld /home/rosa
 drwxr-x--- 2 rosa rosa 4096 de març   5 10:13 /home/rosa
 ```
+
 Només el grup de *rosa* pot executar la carpeta. Els "altres" (**others** ), no.
 
-Què passaria si incloerem l'usuari *tomas* en el grup *rosa*?
+Què passaria si incloerem l'usuari *tomas* en el grup *rosa?
+
+```linux
+tomas@portatil:~$ groups tomas
+tomas : tomas adm cdrom sudo dip plugdev lpadmin lxd sambashare
+tomas@portatil:~$ sudo usermod tomas -aG rosa
+[sudo] contrasenya per a tomas: 
+tomas@portatil:~$ groups tomas
+tomas : tomas adm cdrom sudo dip plugdev lpadmin lxd sambashare rosa
+```
+Els canvis per a aplicar-se cal que reinciem la sessió de *tomas*
+IMPORTANT: el usermod **-aG**
+```linux
+tomas@portatil:~$ ls -l /home/rosa
+total 0
+-rw-rw-r-- 1 rosa rosa 0 de març   5 10:13 crea.txt
+tomas@portatil:~$ cd /home/rosa
+tomas@portatil:/home/rosa$ pwd
+/ome/rosa
+```
+
+
+
+
+
 
