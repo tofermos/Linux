@@ -85,12 +85,9 @@ Els canvis per a aplicar-se cal que reinciem la sessió de *tomas*
 > usermod **-aG**
 >Si no indicamos -a, elimina el usuario de los grupos que pertenece. Ver ayuda (man) seobre *-aG, -G, -g*
 ```linux
-tomas@portatil:~$ ls -l /home/rosa
-total 0
--rw-rw-r-- 1 rosa rosa 0 de març   5 10:13 crea.txt
 tomas@portatil:~$ cd /home/rosa
 tomas@portatil:/home/rosa$ pwd
-/ome/rosa
+/home/rosa
 ```
 
 
