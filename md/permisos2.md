@@ -28,6 +28,9 @@ joan : gr_tomas
 ## 4. Canviem usuari i grup propietari de la carpeta
 ```bash
 tomas@A314-PC00:~$ sudo chown root:gr_tomas CARPETA1
+tomas@A314-PC00:~$ ls -ld CARPETA1/
+drwxrwx--- 2 root gr_tomas 4096 de ma  6 11:48 CARPETA1/
+
 ```
 Ara provarem si l'usuari joan ( de gr_tomas) té els permisos de grup: *drwx**rwx**---*
 Primer hem de donar una contrassenya a l'usuari per poder iniciar sessió amb ell
