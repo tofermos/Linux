@@ -47,7 +47,7 @@ Contrasenya:
 ```
 ## 5. Comprovació
 
-Intentem crear un fitxer en la carpeta ( demostrar que podem **w** escriure-hi
+Intentem crear un fitxer en la carpeta ( demostrar que podem **w** escriure-hi com usuari *joan*
 ```bash
 $ touch CARPETA1/tt
 $ ls -l CARPETA1
