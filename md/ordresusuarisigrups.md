@@ -49,7 +49,7 @@ tomas:x:1000
 ```
 Amb el "usermod" afegim un usuari al grup *tomas*
 ```bash
-tomas@tomas-VirtualBox:~$ sudo usermod pere -G tomas
+tomas@tomas-VirtualBox:~$ sudo usermod pere -aG tomas
 ```
 I ara tenim:
 ```bash
