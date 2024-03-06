@@ -3,8 +3,12 @@
 |Ordre|Acció|
 |---|---|
 |useradd|crea usuari i assigan grup principal i directori de treball|
+|chown| canvia el usuari i/o grup propietari d'una carpeta|
+|chmod|canvia els permisos UGO d'una carpeta|
 
-## 2.- Creem la carpeta i llevem els permisos a la resta d'usuari ( OTHERS )
+
+## 2.- Carpeta i permisos per defecte incials
+Creem la carpeta i llevem els permisos a la resta d'usuari ( OTHERS )
 
 ```bash
 tomas@A314-PC00:~$ mkdir CARPETA1
@@ -14,19 +18,19 @@ tomas@A314-PC00:~$ chmod o-r-x CARPETA1/
 tomas@A314-PC00:~$ ls -ld CARPETA1/     
 drwxrwx--- 2 tomas tomas 4096 de ma  6 11:44 CARPETA1/
 ```
-Creem un grup i un usuari nou. 
+## 3.  Creem un grup i un usuari nou. 
 ```bash
 tomas@A314-PC00:~$ sudo groupadd gr_tomas
 tomas@A314-PC00:~$ sudo useradd joan -g gr_tomas
 tomas@A314-PC00:~$ groups joan
 joan : gr_tomas
 ```
-Canviem usuari i grup propietari de la carpeta
+## 4. Canviem usuari i grup propietari de la carpeta
 ```bash
 tomas@A314-PC00:~$ sudo chown root:gr_tomas CARPETA1
 ```
 Ara provarem si l'usuari joan ( de gr_tomas) té els permisos de grup: *drwx**rwx**---*
-Primer hem de doanr una contrassenya a l'usuari per poder iniciar sessió amb ell
+Primer hem de donar una contrassenya a l'usuari per poder iniciar sessió amb ell
 ```bash
 tomas@A314-PC00:~$ sudo passwd joan
 Nova contrasenya de : 
@@ -38,6 +42,8 @@ Iniciem sessió
 tomas@A314-PC00:~$ su joan
 Contrasenya:
 ```
+## 5. Comprovació
+
 Intentem crear un fitxer en la carpeta ( demostrar que podem **w** escriure-hi
 ```bash
 $ touch CARPETA1/tt
