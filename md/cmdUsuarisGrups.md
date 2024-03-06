@@ -14,6 +14,10 @@ Creem un usuari "vicenta" assignant-li com a grup principal "tomas" ( paràmetre
 
 
 La contrassenya s'assigna amb "passwd"
+```linux
+ls -l
+```
+
 ```bash
 tomas@tomas-VirtualBox:~$ sudo useradd vicenta -G pere -g tomas -m -d /home/vta -s /bin/bash -c "Vicenta Ferrer"
 tomas@tomas-VirtualBox:~$ sudo passwd vicenta
