@@ -24,10 +24,11 @@
 5. [Exercicis resolts](md/preguntes1.md)
 
 ## ADMINISTRACIÓ
-1. [Backup incremental](md/CopiaSeguretatIncremental.md)
-2. [Instal·lació de paquets](md/instalPaquets.md)
-3. [Exemple d'instal·lació](md/instalRStudio.md)
-4. [Hardware](md/hardwareLinux.md)
+1. [Informació del sistema](md/informacioSistema.md)
+2. [Backup incremental](md/CopiaSeguretatIncremental.md)
+3. [Instal·lació de paquets](md/instalPaquets.md)
+4. [Exemple d'instal·lació](md/instalRStudio.md)
+5. [Hardware](md/hardwareLinux.md)
 
 ## TASQUES PROGRAMADES
 1. [Programar tasques](md/ProgramarTasques.md)
