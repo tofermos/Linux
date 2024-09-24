@@ -1,4 +1,6 @@
 # ÍNDEX LINUX
+
+## COMPTES LOCALS (USUARIS i GRUPS) i PERMISOS *UGO*
 1. [Comptes locals](md/cmdUsuarisGrups.md)
 2. [Ordres i scripts de comptes](md/ordresusuarisigrups.md)
 3. [Permisos en directori de perfil](md/permisos.md)
