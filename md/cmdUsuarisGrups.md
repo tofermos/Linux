@@ -15,9 +15,9 @@ Creem un usuari "vicenta" assignant-li com a grup principal "tomas" ( paràmetre
 
 La contrassenya s'assigna amb "passwd"
 
-
 ```bash
-tomas@tomas-VirtualBox:~$ sudo useradd vicenta -G pere -g tomas -m -d /home/vta -s /bin/bash -c "Vicenta Ferrer"
+tomas@tomas-VirtualBox:~$ sudo useradd vicenta -g grContabilidad -m -d /home/vta -s /bin/bash -c "Vicenta Ferrer"
+tomas@tomas-VirtualBox:~$ sudo useradd vicenta -aG grFacturacion
 tomas@tomas-VirtualBox:~$ sudo passwd vicenta
 Nova contrasenya de : 
 Torneu a escriure la nova contrasenya de : 
@@ -26,11 +26,10 @@ tomas@tomas-VirtualBox:~$
 ```
 Comprovem els grups...
 ```bash
-tomas@tomas-VirtualBox:~$ cat /etc/group|grep vicenta
-pere:x:1002:vicenta
+tomas@tomas-VirtualBox:~$ cat /etc/group|grep contabil
+grContabiliad:x:1002:vicenta
 tomas@tomas-VirtualBox:~$ groups vicenta
-vicenta : tomas pere
-tomas@tomas-VirtualBox:~$ 
+vicenta : grContabilidad grFacturacion
 ```
 ## Modificació d'una característica
 
