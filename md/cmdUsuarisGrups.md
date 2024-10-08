@@ -61,9 +61,11 @@ tomas@tomas-VirtualBox:~$
 ```
 Iniciem sessió.
 
-![inici sessió](../images/vta1.png)
+[inici sessió](../images/vta1.png)
+
 Tenim el perfil complet
-![inici sessió](../images/vta2.png)
+
+[inici sessió](../images/vta2.png)
 
 ### Eliminar
 Sobre el *userdel* convé conéixer el paràmtre "-r" per borrar esl directoris de treball i saber que si el grup principal conté altres usuaris es manté.
