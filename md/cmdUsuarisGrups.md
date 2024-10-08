@@ -59,19 +59,15 @@ tomas@tomas-VirtualBox:~$ ls /home
 enric  pere  rosa  tomas  vta
 tomas@tomas-VirtualBox:~$ 
 ```
-Iniciem sessió.
+Amb el primer inici de sessió en el PC de l'usuari nou, es crea el perfil sencer ( carpetes DOcuments, Baixades...)
 
-[inici sessió](../images/vta1.png)
-
-Tenim el perfil complet
-
-[inici sessió](../images/vta2.png)
 
 ### Eliminar
+
 Sobre el *userdel* convé conéixer el paràmtre "-r" per borrar esl directoris de treball i saber que si el grup principal conté altres usuaris es manté.
 ```bash
 tomas@tomas-VirtualBox:~$ sudo userdel -r pere
-userdel: no s'eliminarà el grup pere degut a que hi ha usuaris assignats.
+userdel: no s'eliminarà el grup pere donat que hi ha usuaris assignats.
 userdel: pere no s'ha trobat la cua de correu (/var/mail/pere)
 ```
 ## GRUPS
