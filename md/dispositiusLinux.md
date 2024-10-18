@@ -15,7 +15,7 @@ ls -l /dev
 ```
 O gràficament...
 
-![devgrafic](DispositiusLinux/devgrafic.png)
+![devgrafic](../png/DispositiusLinux/devgrafic.png)
 
 
 ## Tipus d'arxius de dispositius.
