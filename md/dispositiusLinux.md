@@ -30,9 +30,9 @@ A la imatge anterior veiem el *Tipus* d'arxiu ( *Dispositiu de bloc*, *Dispositi
 ls -l /dev | grep ^b
 ```
 
-![Dispositius de bloc](DispositiusLinux/lsdevb.png)
+![Dispositius de bloc](../png/DispositiusLinux/lsdevb.png)
 
-![Dispositius de bloc](DispositiusLinux/lsdevb1.png)
+![Dispositius de bloc](../png/DispositiusLinux/lsdevb1.png)
 
 * Dispositiu de tipus **caracter**: Les dades es transfereixen amb una seqüencia de caràcters. Corresponen a dispositius que no es munten al sistema d'arxius.
   * Teclat
@@ -42,7 +42,7 @@ ls -l /dev | grep ^b
 ```bash
 ls -l /dev | grep ^c
 ```
-![Didpositius de caracters](DispositiusLinux/lsdevc.png)
+![Didpositius de caracters](../png/DispositiusLinux/lsdevc.png)
 
 ## Dispositius de magatzematge
 
@@ -51,7 +51,7 @@ ls -l /dev | grep ^c
 ```bash
 ls -l /dev/sr*
 ```
-![Dispositius CD-ROM](DispositiusLinux/lsdevsr.png)
+![Dispositius CD-ROM](../png/DispositiusLinux/lsdevsr.png)
 
 El número següent indica si tenim altres unitats de CD-DVD
 
@@ -59,7 +59,7 @@ El número següent indica si tenim altres unitats de CD-DVD
 ```bash
 ls -l /dev/sd*
 ```
-![Dispositius SATA](DispositiusLinux/lsdevsd.png)
+![Dispositius SATA](../png/DispositiusLinux/lsdevsd.png)
 
 * a,b,c... indicaran el disc físic.
  * El número següent indica la partició.
@@ -68,7 +68,7 @@ ls -l /dev/sd*
 ```bash
 ls -l /dev/nvme0n*
 ```
-![Dispositius de bloc](DispositiusLinux/lsdevnvm.png)
+![Dispositius de bloc](../png/DispositiusLinux/lsdevnvm.png)
 
  * El número següent indicarà el disc físic.
  * El número següent a la *p* indica la partició dins de cada disc.
@@ -89,9 +89,9 @@ ls -l /dev/nvme0n*
 
 Hem dit que els dispositius de bloc com son els de **magatematge secundari** (pendrive, CD-DVD, discos externs...) es munten al **sistema de fitxers Linux**. Això vol dir que podem accedir a la informació pel terminal (CLI: Client Line Interface ) o per l'interface gràfic ( GUI: Graphic User Interface).
 
-![cli pen](DispositiusLinux/pen.png)
+![cli pen](../png/DispositiusLinux/pen.png)
 
-![gui pen](DispositiusLinux/navegarpormedia.png)
+![gui pen](../png/DispositiusLinux/navegarpormedia.png)
 
 Podem vore que amb les utiliats del sistema podeu eliminar, formatar particions o la unitat sencera des de les opcions del sistema o l'aplicació Gparted.
 :computer:
@@ -108,13 +108,13 @@ sudo apt install gparted
  Si observem el */dev/cdrom* no és un arxiu de dsipositiu sinó un *enllaç simbòlic* a este. 
  (Si no has vist encara el tema d'[Enllaços de Linux][enllaços], pots compara-ho a un Accés directe de Windows )
   
-![Dipositius de bloc](DispositiusLinux/lsdevcd.png)
+![Dipositius de bloc](../png/DispositiusLinux/lsdevcd.png)
 
 ## Altres fitxers de dispositius. NO Hardware.
 
 La resta de fitxers que no són ni fitxers de bloc (b) ni de caràcters, son (generalment) enllaços simbòlics que a algun procés dimoni o un [socket][socket] (fitxer de dispositiu "fictici" que serveix per comunicar procesos. 
 
-![Dipositius de bloc](DispositiusLinux/nombredispositius.png)
+![Dipositius de bloc](../png/DispositiusLinux/nombredispositius.png)
 
 [socket]:socketLinux.md
 
