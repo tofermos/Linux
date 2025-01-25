@@ -125,12 +125,24 @@ Comprovem amb un ping que tenim connexió... (Connexió a nivell de HW, Enllac d
 ```bash
 sudo apt install nfs-common 
 ```
+
+**Reiniciem els serveis funcionen**
+
+Comprovem que el servici instal·lat està actiu...
+```bash
+systemctl restart nfs-common
+```
+
 **Revisem que els serveis funcionen**
 
 Comprovem que el servici instal·lat està actiu...
 ```bash
 systemctl status nfs-common
 ```
+>NOTA:
+>
+>Si apareix el servei com masked, aneu a l'últim apartat on s'explica com solucionar-ho
+
 **Consultem quin són els recursos que ens ha compartit** la màquina amb IP 192.168.0.100 ("servidor")
 
 :computer: Resultat:
@@ -167,7 +179,7 @@ Ara, en accedir a */PROVA1* i */PROVA2* del client estarem accedint a */prova1* 
 5.  Intenta amb *sudo chmod* des del client canviar el permisos de PROVA1 o PROVA2... 
 
 ### 3.3 Fer el muntatge permanent.
-Si xreiniciem el "client" podem comprovar que:
+Si reiniciem el "client" podem comprovar que:
 
 * No veiem els fitxers creats en el servidor dins de les carpetes.
 * Si podem navegar, llagir, crear o eliminar... fins i tot en  PROVA2.
