@@ -195,7 +195,7 @@ Però a la nostra màquina client, ja no tenim les tenim muntades des de que hem
 Ho comprovem:
 
 ```bash
- sudo mount -t nfs
+cat /proc/mounts|grep nfs
 ```
 
 **Modificar el fitxer fstab**
