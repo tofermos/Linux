@@ -269,3 +269,31 @@ Veiem que només podem accedir de forma anònima.
 
 ![mount no ok](../png/NFS/mountError.png)
 
+# 4 Problema "masked"
+
+```bash
+sudo systemctl is-enabled nfs-common
+masked
+```
+
+```bash
+sudo systemctl enable nfs-common
+Synchronizing state of nfs-common.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nfs-common
+Failed to enable unit: Unit file /lib/systemd/system/nfs-common.service is masked.
+```
+
+El problema ve per l'enllaç simbòlic que apunta a /dev/null, hem de borrar-lo.
+
+```bash
+file /lib/systemd/system/nfs-common.service
+/lib/systemd/system/nfs-common.service: symbolic link to /dev/null
+```
+```bash
+sudo rm /lib/systemd/system/nfs-common.service
+```
+Recarreguem la configuració.
+
+```bash
+sudo systemctl daemon-reload
+```
