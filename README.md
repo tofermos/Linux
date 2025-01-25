@@ -31,6 +31,7 @@
 3. [Instal·lació de paquets](md/instalPaquets.md)
 4. [Exemple d'instal·lació](md/instalRStudio.md)
 5. [Hardware](md/hardwareLinux.md)
+6. [Reparar fstab](md/reparar_fstab.md)
 
 ## TASQUES PROGRAMADES
 1. [Programar tasques](md/ProgramarTasques.md)
