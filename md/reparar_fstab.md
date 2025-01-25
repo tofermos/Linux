@@ -12,7 +12,7 @@ Si tens un error en el fitxer **`/etc/fstab`** que impedeix arrancar el sistema,
    ```bash
    lsblk
    ```
-![](png/lsblk.png)
+![](../NFS/lsblk.png)
 
 4. **Munta la partició del sistema:**
    Munta la partició del sistema en un directori, per exemple **`/mnt`**.
