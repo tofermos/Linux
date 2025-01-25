@@ -1,5 +1,40 @@
 
 # PROTOCOL NFS
+
+## 1. Què és i que ofereix?
+
+El protocol NFS (Network File System) permet accedir a fitxers emmagatzemats en un servidor remot com si forenlocals. Està dissenyat per a sistemes Unix/Linux però és compatible amb altres plataformes.
+### Funcionalitats principals:
+
+    * ccés remot a fitxers: Permet compartir directoris entre dispositius.
+    * Arquitectura client-servidor: Els clients munten recursos compartits pel servidor.
+    * Transparència: Els fitxers remots semblen locals.
+    * Compatibilitat multiplataforma: Funciona en entorns Unix, Linux i Windows.
+    * Seguretat millorada (NFSv4): Inclou autenticació Kerberos i millor control d’accés.
+    * Eficiència: Ideal per a xarxes LAN.
+
+### Versions destacades:
+
+    NFSv3: Suport per a fitxers grans i millor rendiment.
+    NFSv4: Més segur i compatible amb TCP.
+
+    Per vore la versió en el servidor:
+    ```bash
+    rpcinfo -p|grep nfs
+    ```
+    En el client
+    ```bash
+    
+    ```
+
+### Usos comuns:
+
+    * Compartir dades en entorns col·laboratius.
+    * Sistemes de còpies de seguretat.
+    * Hosting d’imatges de màquines virtuals.
+
+És ideal per a xarxes locals, però té limitacions de seguretat en versions antigues i no és òptim per a xarxes amb alta latència.
+
 ## 1. En VirtualBox
 Instal·lar 2 Ubuntu configurant com a Xarxa Interna.
 * Ubuntu servidor. IP: 192.168.0.100/24
