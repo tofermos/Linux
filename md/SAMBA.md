@@ -120,7 +120,7 @@ sudo chmod 777 /directori1
 ## 3 CLIENT
 ### 3.1 Client Windows
 
-Si en estos moments tenim un Windwos 10/11 instal·lat en un PC tal que:
+Si en estos moments tenim un Windows 10/11 instal·lat en un PC tal que:
 1. El configurem en Xarxa Privada
 2. El cablegem a la xarxa ( = MV VirtualBox configurada en la mateixa Xarxa Interna)
 3. Un IP del mateix rang 192.168.0.102/24
